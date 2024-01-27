@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>update entry page</h2>
+    <form action="/emprecordupdate/<%=record.id%>" method="post">
+          <label for="">employee name</label>
+          <input type="text" name="ename" id="" value="<%=record.empname%>">  <br>
+          <label for="">employee company</label>
+          <input type="text" name="ecompany" id="" value="<%=record.empcompany%>">  <br>
+          <label for="">employee salary</label>
+          <input type="text" name="esalary" id="" value="<%=record.empsalary%>">  <br>
+          <label for="">employee DOJ</label>
+          <input type="date" name="eDOJ" id="" value="<%=record.empDOJ%>">   <br>
+          <p><%=record.empDOJ%></p>
+          <button type="submit">update</button>
+          <!-- <a href="/selection"><button type="submit">register</button></a> -->
+    </form>
+</body>
+</html>

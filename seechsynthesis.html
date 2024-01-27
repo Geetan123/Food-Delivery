@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speech Synthesis Example</title>
+</head>
+<body>
+  <button onclick="speakText()">Speak</button>
+
+  <script>
+    function speakText() {
+      var speechUtterance = new SpeechSynthesisUtterance();
+      speechUtterance.text = "Hello, how are you";
+      speechUtterance.lang = "en-Uk";
+      speechUtterance.volume = 1;
+      speechUtterance.rate = 1;
+      speechUtterance.pitch = 1;
+        
+      var voices = window.speechSynthesis.getVoices();
+      speechUtterance.voice = voices[0];
+
+      window.speechSynthesis.speak(speechUtterance);
+    }
+  </script>
+</body>
+</html>
